@@ -1,0 +1,20 @@
+{
+  "name": "same-module-stubs",
+  "version": "1.0.0",
+  "description": "A demo of stubs and spies with CommonJS and ES modules",
+  "main": "index.js",
+  "type": "module",
+  "author": "Richard Bultitude",
+  "license": "MIT",
+  "scripts": {
+    "test": "npm run test:commonjs",
+    "test:commonjs": "NODE_ENV=test jest --config jest.cjs.config.js",
+    "test:esm": "NODE_ENV=test node --experimental-vm-modules node_modules/.bin/jest --config jest.esm.config.js",
+    "start": "http-server"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3",
+    "jest": "^26.6.3",
+    "jest-esm-transformer": "^1.0.0"
+  }
+}
